@@ -1,0 +1,26 @@
+<div class="hero-unit">
+    <p>This will show an input box that can be used to filter the data available in the table below</p>
+</div>
+<div class="row">
+    <div class="offset8 span4">
+        <input type="text" class="search-query" placeholder="Filter" data-ng-model="filter.value">
+    </div>
+</div>
+<div class="row">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Last</th>
+            <th>First</th>
+            <th>Birth Place</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr data-ng-repeat="person in people | filter:filter.value | orderBy:person.first">
+            <td>{{person.last}}</td>
+            <td>{{person.first}}</td>
+            <td>{{person.born}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
