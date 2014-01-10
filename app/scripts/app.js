@@ -16,6 +16,18 @@ angular.module('angularApp', [])
             templateUrl:'views/testFilters.html',
             controller:'CtrlFilters'
         })
+        .when("/showhide",{
+              templateUrl: "views/showHide.html",
+              controller:"CtrlShowHide"
+        })
+    .when("/form",{
+              templateUrl: "views/form.html",
+              controller:"FormCtrl"
+        })
+    .when("/display",{
+              templateUrl: "views/display.html",
+              controller:"DisplayCtrl"
+        })
       .otherwise({
         redirectTo: '/'
       });

@@ -1,0 +1,39 @@
+<h1>This is a show hide sample</h1>
+<div>
+    <div class="row">
+        <button class="btn" ng-click="toggleMenu()">Toggle Menu</button>
+    </div>
+    <div class="row">
+        <div class="well span8" ng-show="menuState.show" ng-animate="{enter:'animate-enter',leave:'animate-leave'}">
+            <ul >
+                <li ng-click="stun()">Stun</li>
+                <li ng-click="disintigrate()">Disintigrate</li>
+                <li ng-click="erase()">Erase</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="row" ng-controller="headerControler">
+    <div ng-class="{error:isError, warning:isWarning}">{{messageText}}</div>
+    <button ng-click="showError()">Simulate Error</button>
+    <button ng-click="showWarning()">Simulate Warning</button>
+</div>
+
+<script type="text/javascript">
+function headerController ($scope){
+    $scope.isError = false;
+    $scope.isWarning=false;
+    
+    $scope.showError = function(){
+        $scope.messageText = "This is an error";
+        $scope.isError = true;
+        $scope.isWarning=false;
+    }
+    
+    $scope.showWarning = function(){
+        $scope.messageText = "This is a warning";
+        $scope.isError = false;
+        $scope.isWarning = true;
+    }
+}
+</script>

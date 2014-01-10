@@ -1,0 +1,12 @@
+<p>This is the form view.</p>
+
+<form>
+    <legend>Person Form</legend>
+    <input type="text" ng-model="nP.last" placeholder="Last" tabindex="1">
+    <input type="text" ng-model="nP.first" placeholder="First" tabindex="2">
+    <input type="text" ng-model="nP.age" placeholder="Age" tabindex="3">
+    <a class="btn" ng-click="addPerson()" tabindex="4"><i class="icon-plus-sign"></i></a>
+</form>
+<ul ng-repeat="person in allPeople">
+    <li>{{person.last}},{{person.first}}</li>
+</ul>

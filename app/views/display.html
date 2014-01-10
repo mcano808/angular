@@ -1,0 +1,16 @@
+<p>This is the display view.</p>
+
+<table class="table">
+    <thead>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+    </thead>
+    <tbody ng-repeat="person in people | orderBy:'-age'">
+        <tr>
+            <td>{{person.first}}</td>
+            <td>{{person.last}}</td>
+            <td>{{person.age}}</td>
+        </tr>
+    </tbody>
+</table>
